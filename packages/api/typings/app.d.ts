@@ -32,6 +32,7 @@ export type ExternalJobUrl = {
 export interface QueueAdapterOptions {
   readOnlyMode: boolean;
   allowRetries: boolean;
+  allowPromoteAll: boolean;
   prefix: string;
   description: string;
   displayName: string;
@@ -157,6 +158,7 @@ export interface AppQueue {
   readOnlyMode: boolean;
   allowRetries: boolean;
   allowCompletedRetries: boolean;
+  allowPromoteAll: boolean;
   isPaused: boolean;
   type: QueueType;
   globalConcurrency: number | null;

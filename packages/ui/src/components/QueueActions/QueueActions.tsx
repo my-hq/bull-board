@@ -48,7 +48,7 @@ export const QueueActions = ({ status, actions, queue, allowRetries }: QueueActi
           </Button>
         </li>
       )}
-      {isPromoteAllStatus(status) && (
+      {isPromoteAllStatus(status) && queue.allowPromoteAll && (
         <li>
           <Button onClick={actions.promoteAll(queue.name)} className={s.button}>
             <PromoteIcon />

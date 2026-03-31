@@ -15,6 +15,7 @@ export abstract class BaseAdapter {
   public readonly readOnlyMode: boolean;
   public readonly allowRetries: boolean;
   public readonly allowCompletedRetries: boolean;
+  public readonly allowPromoteAll: boolean;
   public readonly prefix: string;
   public readonly delimiter: string;
   public readonly description: string;
@@ -31,6 +32,7 @@ export abstract class BaseAdapter {
     this.readOnlyMode = options.readOnlyMode === true;
     this.allowRetries = this.readOnlyMode ? false : options.allowRetries !== false;
     this.allowCompletedRetries = this.allowRetries && options.allowCompletedRetries !== false;
+    this.allowPromoteAll = this.readOnlyMode ? false : options.allowPromoteAll !== false;
     this.prefix = options.prefix || '';
     this.delimiter = options.delimiter || '';
     this.description = options.description || '';

@@ -93,6 +93,7 @@ async function getAppQueues(
         readOnlyMode: queue.readOnlyMode,
         allowRetries: queue.allowRetries,
         allowCompletedRetries: queue.allowCompletedRetries,
+        allowPromoteAll: queue.allowPromoteAll,
         isPaused,
         type: queue.type,
         delimiter: queue.delimiter,
